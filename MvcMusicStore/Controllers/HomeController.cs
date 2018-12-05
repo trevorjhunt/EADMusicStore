@@ -10,7 +10,7 @@ namespace MvcMusicStore.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "StoreManager");
         }
 
         public ActionResult About()

@@ -12,7 +12,7 @@ namespace MvcMusicStore
     {
         protected void Application_Start()
         {
-            System.Data.Entity.Database.SetInitializer(new myMusicStore.Models.SampleData());
+            System.Data.Entity.Database.SetInitializer(new MvcMusicStore.Models.SampleData());
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

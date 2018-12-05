@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace myMusicStore.Models
+namespace MvcMusicStore.Models
 {
     public class Artist
     {

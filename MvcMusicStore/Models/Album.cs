@@ -4,7 +4,7 @@ using System.Web.Mvc;
 
 
 
-namespace myMusicStore.Models
+namespace MvcMusicStore.Models
 {
     //[Bind(Exclude = "AlbumId")]
     public class Album

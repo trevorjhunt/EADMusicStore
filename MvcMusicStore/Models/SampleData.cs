@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
-using myMusicStore.Models;
+using MvcMusicStore.Models;
 
-namespace myMusicStore.Models
+namespace MvcMusicStore.Models
 {
     // use this to only drop and create on change "DropCreateDatabaseIfModelChanges"
-    public class SampleData : DropCreateDatabaseAlways<MusicEntities>
+    public class SampleData : DropCreateDatabaseAlways<ApplicationDbContext>
     {
-        protected override void Seed(MusicEntities context)
+        protected override void Seed(ApplicationDbContext context)
         {
 
             var genres = new List<Genre>
