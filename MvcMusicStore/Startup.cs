@@ -14,7 +14,7 @@ namespace MvcMusicStore
             ConfigureAuth(app);
         }
 
-        private void createRolesandUsers()
+        private void CreateRolesandUsers()
         {
             ApplicationDbContext context = new ApplicationDbContext();
 

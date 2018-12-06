@@ -28,9 +28,10 @@ namespace MvcMusicStore.Models
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
 
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.SetInitializer<ApplicationDbContext>(new DropCreateDatabaseAlways<ApplicationDbContext>());
+            Database.SetInitializer(new MvcMusicStore.Models.SampleData());
         }
 
         public static ApplicationDbContext Create()
