@@ -12,6 +12,7 @@ namespace MvcMusicStore
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            CreateRolesandUsers();
         }
 
         private void CreateRolesandUsers()
@@ -37,7 +38,7 @@ namespace MvcMusicStore
                 user.UserName = "admin@ead.com";
                 user.Email = "admin@ead.com";
 
-                string userPWD = "whatever";
+                string userPWD = "Password123";
 
                 var chkUser = UserManager.Create(user, userPWD);
 
