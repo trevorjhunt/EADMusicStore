@@ -29,8 +29,8 @@ namespace EADMusicStore.Models
 
 
         public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
-        {
-            Database.SetInitializer<ApplicationDbContext>(new DropCreateDatabaseAlways<ApplicationDbContext>());
+        {            
+            Database.SetInitializer<ApplicationDbContext>(new DropCreateDatabaseIfModelChanges<ApplicationDbContext>());
             Database.SetInitializer(new EADMusicStore.Models.SampleData());
         }
 
