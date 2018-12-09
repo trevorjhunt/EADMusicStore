@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MvcMusicStore.Models
+namespace EADMusicStore.Models
 {
     [Bind(Exclude = "OrderId")]
     public partial class Order

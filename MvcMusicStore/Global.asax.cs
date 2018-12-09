@@ -6,13 +6,13 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace MvcMusicStore
+namespace EADMusicStore
 {
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
-            //System.Data.Entity.Database.SetInitializer(new MvcMusicStore.Models.SampleData());
+            //System.Data.Entity.Database.SetInitializer(new EADMusicStore.Models.SampleData());
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

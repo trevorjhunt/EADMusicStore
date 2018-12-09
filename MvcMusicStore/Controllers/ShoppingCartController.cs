@@ -1,12 +1,12 @@
-﻿using MvcMusicStore.Models;
-using MvcMusicStore.ViewModels;
+﻿using EADMusicStore.Models;
+using EADMusicStore.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MvcMusicStore.Controllers
+namespace EADMusicStore.Controllers
 {
     public class ShoppingCartController : Controller
     {

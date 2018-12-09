@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace MvcMusicStore
+namespace EADMusicStore
 {
     public class BundleConfig
     {

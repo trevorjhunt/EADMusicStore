@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
-using MvcMusicStore.Models;
+using EADMusicStore.Models;
 
-namespace MvcMusicStore.Models
+namespace EADMusicStore.Models
 {
     // use this to only drop and create on change "DropCreateDatabaseIfModelChanges"
     public class SampleData : DropCreateDatabaseAlways<ApplicationDbContext>

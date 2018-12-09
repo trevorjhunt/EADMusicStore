@@ -6,9 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MvcMusicStore.Models;
+using EADMusicStore.Models;
 
-namespace MvcMusicStore.Controllers
+namespace EADMusicStore.Controllers
 {
     public class StoreManagerController : Controller
     {

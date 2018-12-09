@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
-using MvcMusicStore.Models;
+using EADMusicStore.Models;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(MvcMusicStore.Startup))]
-namespace MvcMusicStore
+[assembly: OwinStartupAttribute(typeof(EADMusicStore.Startup))]
+namespace EADMusicStore
 {
     public partial class Startup
     {

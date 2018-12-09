@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace MvcMusicStore.Models
+namespace EADMusicStore.Models
 {
 
     //public class MusicEntities : IdentityDbContext<ApplicationUser>
@@ -15,7 +15,7 @@ namespace MvcMusicStore.Models
     //    public DbSet<Artist> Artists { get; set; }
 
     //    public MusicEntities()
-    //        : base("MvcMusicStore.Models.MusicEntities", throwIfV1Schema: false)
+    //        : base("EADMusicStore.Models.MusicEntities", throwIfV1Schema: false)
     //    {
     //    }
 

@@ -1,10 +1,10 @@
-﻿using MvcMusicStore.Models;
+﻿using EADMusicStore.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MvcMusicStore.ViewModels
+namespace EADMusicStore.ViewModels
 {
     public class ShoppingCartViewModel
     {

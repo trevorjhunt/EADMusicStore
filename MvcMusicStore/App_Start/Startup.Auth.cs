@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 //using Microsoft.Owin.Security.Google;
 using Owin;
-using MvcMusicStore.Models;
+using EADMusicStore.Models;
 
-namespace MvcMusicStore
+namespace EADMusicStore
 {
     public partial class Startup
     {

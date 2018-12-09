@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace MvcMusicStore.Models
+namespace EADMusicStore.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -31,7 +31,7 @@ namespace MvcMusicStore.Models
         public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
         {
             Database.SetInitializer<ApplicationDbContext>(new DropCreateDatabaseAlways<ApplicationDbContext>());
-            Database.SetInitializer(new MvcMusicStore.Models.SampleData());
+            Database.SetInitializer(new EADMusicStore.Models.SampleData());
         }
 
         public static ApplicationDbContext Create()
