@@ -37,10 +37,12 @@ namespace EADMusicStore
                 var user = new ApplicationUser();
                 user.UserName = "admin@ead.com";
                 user.Email = "admin@ead.com";
+                user.Id = "1111111111";
 
                 string userPWD = "Password123";
 
                 var chkUser = UserManager.Create(user, userPWD);
+
 
                 //Add default User to Role Admin   
                 if (chkUser.Succeeded)
