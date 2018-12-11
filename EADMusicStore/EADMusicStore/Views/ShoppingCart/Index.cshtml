@@ -105,7 +105,9 @@
             <td></td>
             <td></td>
             <td></td>
-            <td href="@Url.Action("AddressAndPayment", "Checkout")" class="btn btn-sm btn-success mt-3">Checkout</> </td>
+            @*  <td href="@Url.Action("AddressAndPayment", "Checkout")" class="btn btn-sm btn-success mt-3">Checkout</> </td>*@
+            @*<td href="@{Html.Action("AddressAndPayment", "Checkout");}" class="btn btn-sm btn-success mt-3">Checkout</> </td>*@
+            <td><button type="button" class="btn btn-lg"> @Html.ActionLink("Checkout", "AddressAndPayment", "Checkout") </button></td>
         </tr>
     </tbody>
 </table>
