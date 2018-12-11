@@ -25,7 +25,7 @@
 
                         $('#cart-total').text(data.CartTotal);
                         $('#update-message').text(data.Message);
-                        $('#cart-status').text('Cart (' + data.CartCount + ')');
+                        $('#cart-status').text('Cart [' + data.CartCount + ']');
                     });
             }
         });
@@ -47,55 +47,67 @@
 
         $('#cart-total').text(data.CartTotal);
         $('#update-message').text(data.Message);
-        $('#cart-status').text('Cart (' + data.CartCount + ')');
+        $('#cart-status').text('Cart [' + data.CartCount + ']');
     }
 </script>
+
 <h3>
-    <em>Review</em> your cart:
+    Review your cart:
 </h3>
-<p class="button">
-    @Html.ActionLink("Checkout >>", "AddressAndPayment", "Checkout")
-</p>
 <div id="update-message">
 </div>
-<table>
-    <tr>
-        <th>
-            Album Name
-        </th>
-        <th>
-            Price (each)
-        </th>
-        <th>
-            Quantity
-        </th>
-        <th></th>
-    </tr>
-    @foreach (var item in Model.CartItems)
-    {
-        <tr id="row-@item.RecordId">
-            <td>
-                @Html.ActionLink(item.Album.Title, "Details", "Store", new { id = item.AlbumId }, null)
-            </td>
-            <td>
-                @item.Album.Price
-            </td>
-            <td id="item-count-@item.RecordId">
-                @item.Count
-            </td>
-            <td>
-                <a href="#" class="RemoveLink" data-id="@item.RecordId">Remove from cart</a>
-            </td>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Album Name</th>
+            <th scope="col">Price (each)</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Action</th>
         </tr>
-    }
-    <tr>
-        <td>
-            Total
-        </td>
-        <td></td>
-        <td></td>
-        <td id="cart-total">
-            @Model.CartTotal
-        </td>
-    </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CartItems)
+        {
+            <tr id="row-@item.RecordId">
+                <td>
+                    @Html.ActionLink(item.Album.Title, "Details", "Store", new { id = item.AlbumId }, null)
+                </td>
+                <td>
+                    @item.Album.Price
+                </td>
+                <td id="item-count-@item.RecordId">
+                    @item.Count
+                </td>
+                <td>
+                    <a href="#" class="RemoveLink" data-id="@item.RecordId">Remove from cart</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <thead class="thead-light">
+        <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="cart-total">@Model.CartTotal</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><button type="button" class="btn btn-success"> @Html.ActionLink("Checkout", "AddressAndPayment", "Checkout") </button></td>
+        </tr>
+    </tbody>
 </table>
+
+

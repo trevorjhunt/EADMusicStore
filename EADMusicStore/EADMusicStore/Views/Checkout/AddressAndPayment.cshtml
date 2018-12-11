@@ -8,14 +8,13 @@
         type="text/javascript"></script>
 @using (Html.BeginForm())
 {
-
     <h2>Address And Payment</h2>
     <fieldset>
         <legend>Shipping Information</legend>
         @Html.EditorForModel()
     </fieldset>
-    <fieldset>
-        <legend>Payment</legend>
+    <fieldset class="mt-3">
+        <legend>Payment </legend>
         <p>
             We're running a promotion: all music is free
             with the promo code: "FREE"
@@ -27,6 +26,5 @@
             @Html.TextBox("PromoCode")
         </div>
     </fieldset>
-
-    <input type="submit" value="Submit Order" />
+    <button type="submit" class="btn btn-primary mt-5">Submit Order</button>
 }

@@ -1,19 +1,45 @@
 ﻿@model List<EADMusicStore.Models.Album>
+
+@helper Truncate(string input, int length)
+{
+    if (input.Length <= length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+
 @{
-    ViewBag.Title = "ASP.NET MVC Music Store";
+    ViewBag.Title = "EAD Music Store";
 }
 <div id="promotion">
 </div>
 <h3>Top selling albums</h3>
-<ul id="album-list">
+
+<div class="row">
     @foreach (var album in Model)
     {
-        <li>
-            <a href="@Url.Action("Details", "Store",
-                new { id = album.AlbumId })">
-                <img alt="@album.Title" src="@album.AlbumArtUrl" />
-                <span>@album.Title</span>
-            </a>
-        </li>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm" style="width: 20rem;">
+                <img class="card-img-top" src=@Html.DisplayFor(modelItem => album.AlbumArtUrl) alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">
+                        <strong>@Html.DisplayNameFor(model => album.Title): </strong>@Truncate(album.Title, 40) <br />
+                        <strong>@Html.DisplayNameFor(model => album.Artist.Name): </strong>@Truncate(album.Artist.Name, 40) <br />
+                        <strong>@Html.DisplayNameFor(model => album.Genre.Name): </strong>@Html.DisplayFor(modelItem => album.Genre.Name) <br />
+                        <strong>@Html.DisplayNameFor(model => album.Price): </strong>@Html.DisplayFor(modelItem => album.Price)
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="@Url.Action("Details", "Store", new { id = album.AlbumId })" class="btn btn-sm btn-outline-secondary">Details</a>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">@Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = album.AlbumId }, "")</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     }
-</ul>
+</div>

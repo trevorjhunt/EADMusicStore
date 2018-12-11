@@ -8,11 +8,129 @@
 <p>
     Select from @Model.Count() genres:
 </p>
-<ul>
-    @foreach (var genre in Model)
-    {
-        <li>
-            @Html.ActionLink(genre.Name,"Browse", new { genre = genre.Name })
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="width: 20rem;">
+            <img class="card-img-top" src="~/Content/Images/classical.jpg" alt="Card image cap">
+            <div class="card-body">
+                @*<p class="card-text"> <strong>Classical</strong></p>*@
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group"> 
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@Html.ActionLink("Classical", "Browse", new { genre = "Classical" })</button>
+                    </div>
+                    @*<small class="text-muted">9 mins</small>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="width: 20rem;">
+            <img class="card-img-top" src="~/Content/Images/rock.jpg" alt="Card image cap">
+            <div class="card-body">
+                @*<p class="card-text"> <strong>Rock</strong></p>*@
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@Html.ActionLink("Rock", "Browse", new { genre = "Rock" })</button>
+                    </div>
+                    @*<small class="text-muted">9 mins</small>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="width: 20rem;">
+            <img class="card-img-top" src="~/Content/Images/jazz.jpg" alt="Card image cap">
+            <div class="card-body">
+                @*<p class="card-text"> <strong>Jazz</strong></p>*@
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" style="width: 20rem;">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@Html.ActionLink("Jazz", "Browse", new { genre = "Jazz" })</button>
+                    </div>
+                    @*<small class="text-muted">9 mins</small>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="width: 20rem;">
+            <img class="card-img-top" src="~/Content/Images/alternative.jpg" alt="Card image cap">
+            <div class="card-body">
+                @*<p class="card-text"> <strong>Alternative</strong></p>*@
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" style="width: 20rem;">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@Html.ActionLink("Alternative", "Browse", new { genre = "Alternative" })</button>
+                    </div>
+                    @*<small class="text-muted">9 mins</small>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="width: 20rem;">
+            <img class="card-img-top" src="~/Content/Images/disco.jpg" alt="Card image cap">
+            <div class="card-body">
+                @*<p class="card-text"> <strong>Disco</strong></p>*@
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" style="width: 20rem;">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@Html.ActionLink("Disco", "Browse", new { genre = "Disco" })</button>
+                    </div>
+                    @*<small class="text-muted">9 mins</small>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="width: 20rem;">
+            <img class="card-img-top" src="~/Content/Images/metal.jpg" alt="Card image cap">
+            <div class="card-body">
+                @*<p class="card-text"> <strong>Metal</strong></p>*@
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" style="width: 20rem;">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@Html.ActionLink("Metal", "Browse", new { genre = "Metal" })</button>
+                    </div>
+                    @*<small class="text-muted">9 mins</small>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="width: 20rem;">
+            <img class="card-img-top" src="~/Content/Images/latin.jpg" alt="Card image cap">
+            <div class="card-body">
+                @*<p class="card-text"> <strong>Latin</strong></p>*@
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" style="width: 20rem;">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@Html.ActionLink("Latin", "Browse", new { genre = "Latin" })</button>
+                    </div>
+                    @*<small class="text-muted">9 mins</small>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="width: 20rem;">
+            <img class="card-img-top" src="~/Content/Images/reggae.jpg" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"> <strong>Reggae</strong></p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" style="width: 20rem;">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@Html.ActionLink("Reggae", "Browse", new { genre = "Reggae" })</button>
+                    </div>
+                    @*<small class="text-muted">9 mins</small>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<ul class="list-group">
+        @foreach (var genre in Model)
+        {
+        <li class="list-group-item d-flex justify-content-between align-items-center" style="width: 40rem;">
+            @Html.ActionLink(genre.Name, "Browse", new { genre = genre.Name })
+            <span class="badge badge-primary badge-pill">10</span>
         </li>
-    }
-</ul>
+        }
+    </ul>*@
