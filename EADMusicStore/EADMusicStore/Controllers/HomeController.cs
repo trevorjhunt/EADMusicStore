@@ -19,7 +19,7 @@ namespace EADMusicStore.Controllers
             return View(albums);
         }
 
-        private List<Album> GetTopSellingAlbums(int count)
+        public List<Album> GetTopSellingAlbums(int count)
         {
             // Group the order details by album and return
             // the albums with the highest count

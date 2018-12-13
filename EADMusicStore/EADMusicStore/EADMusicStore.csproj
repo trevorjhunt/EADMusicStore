@@ -198,6 +198,7 @@
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\IApplicationDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MusicEntities.cs" />
@@ -245,6 +246,9 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <None Include="Properties\PublishProfiles\EADMusicStore - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\EADMusicStore - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\EADMusicStore20181211111018 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\holder.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

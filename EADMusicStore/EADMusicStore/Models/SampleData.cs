@@ -8,7 +8,8 @@ using EADMusicStore.Models;
 namespace EADMusicStore.Models
 {
     // use this to only drop and create on change "DropCreateDatabaseIfModelChanges"
-    public class SampleData : DropCreateDatabaseAlways<ApplicationDbContext>
+    // we can also use "DropCreateDatabaseAlways"  
+    public class SampleData : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
     {
         protected override void Seed(ApplicationDbContext context)
         {

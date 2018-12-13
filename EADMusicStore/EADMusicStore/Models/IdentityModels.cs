@@ -18,8 +18,17 @@ namespace EADMusicStore.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
+        public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
+        {
+            // uncomment to drop and re-create DB
+            //Database.SetInitializer<ApplicationDbContext>(new DropCreateDatabaseIfModelChanges<ApplicationDbContext>());
+
+            // uncomment to re-create a database and populate it with data
+            Database.SetInitializer(new EADMusicStore.Models.SampleData());
+        }
+
         public DbSet<Album> Albums { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Artist> Artists { get; set; }
@@ -28,10 +37,9 @@ namespace EADMusicStore.Models
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
 
-        public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
-        {            
-            //Database.SetInitializer<ApplicationDbContext>(new DropCreateDatabaseIfModelChanges<ApplicationDbContext>());
-            //Database.SetInitializer(new EADMusicStore.Models.SampleData());
+        public void MarkAsModified(Album item)
+        {
+            Entry(item).State = EntityState.Modified;
         }
 
         public static ApplicationDbContext Create()

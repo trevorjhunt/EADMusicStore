@@ -14,7 +14,13 @@ namespace EADMusicStore.Controllers
 {
     public class AlbumsController : ApiController
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private IApplicationDbContext db = new ApplicationDbContext();
+        public AlbumsController() { }
+
+        public AlbumsController(IApplicationDbContext context)
+        {
+            db = context;
+        }
 
         // GET: api/Albums
         [ResponseType(typeof(IEnumerable<String>))]
@@ -25,7 +31,7 @@ namespace EADMusicStore.Controllers
             if (db.Albums.Count() == 0)
                 return NotFound();
             
-            var albums = db.Albums.Select(w => w.Title);      
+            var albums = db.Albums.Select(w => w.Title);
             return Ok(albums);
         }
     }
